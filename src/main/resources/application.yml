@@ -1,5 +1,5 @@
 server:
-  port: 9003
+  port: 9000
 spring:
   application:
     name: gateway-api #服务名，将注册到eureka注册中心
@@ -8,7 +8,7 @@ eureka:
     #fetchRegistry: true
     registry-fetch-interval-seconds: 5 #间隔多久去拉取服务注册信息，默认为30秒,网关最好设置短点
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/ #注册地址，eureka服务地址
+      defaultZone: http://root:123456@localhost:8761/register-center/eureka/ #注册地址，eureka服务地址
       
 zuul:
   prefix: /gateway-api
